@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kui.com.greenkiondo.Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bcgreynew"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="400dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/lgEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lPassword"
+                android:layout_alignStart="@+id/lPassword"
+                android:background="#CCffffff"
+                android:ems="10"
+                android:fontFamily="@font/aileron"
+                android:hint="Email"
+                android:inputType="textPersonName"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/lgPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/Login_B"
+                android:layout_centerHorizontal="true"
+                android:background="#CCffffff"
+                android:ems="10"
+                android:fontFamily="@font/aileron"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="228dp"
+                android:layout_height="51dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/primaryDarkColor"
+                android:fontFamily="@font/aileron"
+                android:text="LOGIN"
+                android:textColor="@color/secondaryTextColor"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="15dp"/>
+
+            <android.support.v7.widget.AppCompatTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Dont have an account? Sign Up"
+                android:textAlignment="center"
+                android:textColor="@color/secondaryTextColor" />
+
+            <Button
+                android:id="@+id/btn_login_signup"
+                android:layout_width="228dp"
+                android:layout_height="51dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/primaryDarkColor"
+                android:fontFamily="@font/aileron"
+                android:text="SIGN UP"
+                android:textColor="@color/secondaryTextColor"
+                 />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

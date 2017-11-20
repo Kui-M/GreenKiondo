@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kui.com.greenkiondo.SignUp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/fruit_bcs">
+        <!--android:background="@drawable/fruit_bc"-->
+
+
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="450dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+
+
+            >
+            <EditText
+                android:id="@+id/sn_fName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/aileron"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:background="#CCffffff"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                 />
+
+            <EditText
+                android:id="@+id/sn_lName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/aileron"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:background="#CCffffff"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/sn_pNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/aileron"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textAlignment="center"
+                android:background="#CCffffff"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/sn_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/aileron"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                android:background="#CCffffff"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/sn_pAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/aileron"
+                android:hint="Physical Address"
+                android:inputType="textPostalAddress"
+                android:textAlignment="center"
+                android:background="#CCffffff"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/sn_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/aileron"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:background="#CCffffff"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/sn_cPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/aileron"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:background="#CCffffff"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/primaryDarkColor"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Sign Up"
+                android:textColor="@color/primaryTextColor" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

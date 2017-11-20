@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kui.com.greenkiondo.Instructions"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bcgreynew"
+
+       >
+
+       <LinearLayout
+           android:layout_width="290dp"
+           android:layout_height="450dp"
+           android:layout_centerInParent="true"
+           android:gravity="center"
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/tag"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Thank You for downloading our app!You are valued cusstomer! below are some Guidelines on how to use our application"
+               android:textColor="@color/primaryTextColor" />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+
+               android:fontFamily="@font/aileron"
+               android:text="Step 1: If you have an account, login by clicking the Log in button. Dont have an Account? create an account by clicking the SignUp button"
+               android:textColor="@color/primaryTextColor"
+               android:textSize="18sp" />
+
+           <Button
+               android:id="@+id/inst_proceed"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@color/primaryDarkColor"
+               android:fontFamily="@font/aileron"
+               android:paddingBottom="5dp"
+               android:paddingTop="5dp"
+               android:text="Proceed to recipies galore"
+               android:textColor="@color/primaryTextColor" />
+
+
+       </LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
+
