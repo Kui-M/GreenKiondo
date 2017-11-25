@@ -19,6 +19,10 @@
         <activity android:name=".Login" />
         <activity android:name=".SignUp" />
         <activity android:name=".Home" />
+        <activity
+            android:name=".NavActivity"
+            android:label="@string/title_activity_nav"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
