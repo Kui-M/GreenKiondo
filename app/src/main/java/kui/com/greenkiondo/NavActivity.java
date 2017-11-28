@@ -1,5 +1,6 @@
 package kui.com.greenkiondo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,6 +17,7 @@ import android.view.MenuItem;
 public class NavActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    SessionManager session;
     NavigationView navigationView = null;
     Toolbar toolbar = null;
 
@@ -26,6 +28,8 @@ public class NavActivity extends AppCompatActivity
         setContentView(R.layout.activity_nav);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        session = new SessionManager(getApplicationContext());
 
         HomeFragment homeFragment = new HomeFragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction =
@@ -122,7 +126,9 @@ public class NavActivity extends AppCompatActivity
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, aboutFragment);
             fragmentTransaction.commit();
-        }
+        }  else if (id == R.id.nav_logout) {
+           session.logoutUser();
+    }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
