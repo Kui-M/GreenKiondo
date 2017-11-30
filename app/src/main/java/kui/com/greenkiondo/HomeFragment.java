@@ -1,12 +1,15 @@
 package kui.com.greenkiondo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.GridView;
 
 
 /**
@@ -22,6 +25,8 @@ public class HomeFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    Button btnBeefChicken , btnVegeterian , btnBreakfast, btnDrink , btnDinnerLunch, btnDessert, btnPasta,btnSeafood;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -58,13 +63,87 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+
+      btnBreakfast = (Button)rootView.findViewById(R.id.ig_btn_bfast);
+      btnBreakfast.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              Intent bfast= new Intent(getActivity(),BreakfastActivity.class);
+              startActivity(bfast);
+          }
+      });
+
+        btnBeefChicken = (Button)rootView.findViewById(R.id.ig_btn_beef_chick);
+        btnBeefChicken.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent bfchick= new Intent(getActivity(),Beef_ChickenActivity.class);
+                startActivity(bfchick);
+            }
+        });
+
+        btnPasta = (Button)rootView.findViewById(R.id.ig_btn_pasta);
+        btnPasta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pasta= new Intent(getActivity(),PastaActivity.class);
+                startActivity(pasta);
+            }
+        });
+        btnVegeterian = (Button)rootView.findViewById(R.id.ig_btn_veg);
+        btnVegeterian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent veg= new Intent(getActivity(),VegeterianActivity.class);
+                startActivity(veg);
+            }
+        });
+
+        btnDessert = (Button)rootView.findViewById(R.id.ig_btn_dess);
+        btnDessert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent dess= new Intent(getActivity(),DessertActivity.class);
+                startActivity(dess);
+            }
+        });
+
+        btnDrink = (Button)rootView.findViewById(R.id.ig_btn_drinks);
+        btnDrink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent drink= new Intent(getActivity(),DrinkActivity.class);
+                startActivity(drink);
+            }
+        });
+
+        btnDinnerLunch = (Button)rootView.findViewById(R.id.ig_btn_din_ln);
+        btnDinnerLunch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent dinlin= new Intent(getActivity(),Dinner_LunchActivity.class);
+                startActivity(dinlin);
+            }
+        });
+
+        btnSeafood = (Button)rootView.findViewById(R.id.ig_btn_seaf);
+        btnSeafood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent seaf= new Intent(getActivity(),SeafoodActivity.class);
+                startActivity(seaf);
+            }
+        });
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -77,12 +156,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-       /* if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }*/
+
     }
 
     @Override

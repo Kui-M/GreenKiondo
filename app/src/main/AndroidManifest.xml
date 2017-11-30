@@ -5,8 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
-        android:name="kui.com.greenkiondo.AppController"
+        android:name=".AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,8 +24,16 @@
         <activity android:name=".Home" />
         <activity
             android:name=".NavActivity"
-            android:label="@string/title_activity_nav"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="Home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".BreakfastActivity" />
+        <activity android:name=".Dinner_LunchActivity" />
+        <activity android:name=".DessertActivity" />
+        <activity android:name=".DrinkActivity" />
+        <activity android:name=".Beef_ChickenActivity" />
+        <activity android:name=".SeafoodActivity" />
+        <activity android:name=".PastaActivity" />
+        <activity android:name=".VegeterianActivity"></activity>
     </application>
 
 </manifest>

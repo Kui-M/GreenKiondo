@@ -9,4 +9,19 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Tile names -->
+    <string name="breakfast">Breakfast</string>
+    <string name="dinner_lunch">Dinner/Lunch</string>
+    <string name="dessert">Dessert</string>
+    <string name="drinks">Drinks</string>
+    <string name="beef_chicken">Beef/Chicken</string>
+    <string name="pasta">Pasta</string>
+    <string name="vegeterian">Vegeterian</string>
+    <string name="seafood">Seafood</string>
+
+
+    <string name="browse">Browse</string>
+    <string name="search">Search</string>
+    <string name="ingredients">Ingredients</string>
 </resources>

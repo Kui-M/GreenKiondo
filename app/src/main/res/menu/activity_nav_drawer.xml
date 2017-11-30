@@ -7,39 +7,50 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="Home" />
+            android:title="Home"
+            android:fontFamily="@font/aileron_light"/>
         <item
             android:id="@+id/nav_my_kiondo"
             android:icon="@drawable/ic_kiondo"
-            android:title="My Kiondo" />
+            android:title="My Kiondo"
+            android:fontFamily="@font/aileron_light"/>
         <item
             android:id="@+id/nav_my_recipies"
             android:icon="@drawable/ic_recipies"
-            android:title="My Recipies" />
+            android:title="My Recipies"
+            android:fontFamily="@font/aileron_light"/>
         <item
             android:id="@+id/nav_search"
             android:icon="@drawable/ic_search"
-            android:title="Search" />
+            android:title="Search"
+            android:fontFamily="@font/aileron_light"/>
     </group>
 
-    <item android:title="Other">
+
+    <group android:checkableBehavior="single">
+    <item android:title="Other"
+        android:fontFamily="@font/aileron_light">
         <menu>
             <item
                 android:id="@+id/nav_settings"
                 android:icon="@drawable/ic_action_name"
-                android:title="Settings" />
+                android:title="Settings"
+                android:fontFamily="@font/aileron_light"/>
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_info"
-                android:title="About" />
+                android:title="About"
+                android:fontFamily="@font/aileron_light"/>
 
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_logout"
-                android:title="Logout">
+                android:title="Logout"
+                android:fontFamily="@font/aileron_light">
 
             </item>
         </menu>
     </item>
+    </group>
 
 </menu>

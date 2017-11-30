@@ -4,11 +4,127 @@
     android:layout_height="match_parent"
     tools:context="kui.com.greenkiondo.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="home"
-        android:gravity="center"/>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/browse"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_marginTop="@dimen/height"
+          android:gravity="center"
+          android:text="@string/browse"
+          android:textSize="45dp"
+          android:fontFamily="@font/aileron_light"/>
+
+      <LinearLayout
+          android:layout_width="180dp"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/browse"
+          android:orientation="vertical">
+
+         <Button
+             android:id="@+id/ig_btn_bfast"
+             android:layout_width="match_parent"
+             android:layout_height="110dp"
+             android:background="@drawable/breakfast"
+
+             android:scaleType="centerCrop"
+             android:text="@string/breakfast"
+             android:textColor="@color/primaryTextColor"
+             android:fontFamily="@font/aileron_light"/>
+
+         <Button
+             android:id="@+id/ig_btn_din_ln"
+             android:layout_width="match_parent"
+             android:layout_height="110dp"
+             android:layout_below="@+id/ig_btn_bfast"
+             android:background="@drawable/lunch_dinner"
+             android:scaleType="centerCrop"
+             android:text="@string/dinner_lunch"
+             android:textColor="@color/primaryTextColor"
+             android:fontFamily="@font/aileron_light"/>
+
+         <Button
+             android:id="@+id/ig_btn_dess"
+             android:layout_width="match_parent"
+             android:layout_height="110dp"
+             android:layout_below="@+id/ig_btn_din_ln"
+             android:background="@drawable/dessert"
+             android:scaleType="centerCrop"
+             android:text="@string/dessert"
+             android:textColor="@color/primaryTextColor"
+             android:fontFamily="@font/aileron_light"/>
+
+         <Button
+             android:id="@+id/ig_btn_drinks"
+             android:layout_width="match_parent"
+             android:layout_height="110dp"
+             android:layout_below="@+id/ig_btn_dess"
+             android:background="@drawable/drinks"
+             android:scaleType="centerCrop"
+             android:text="@string/drinks"
+             android:textColor="@color/primaryTextColor"
+             android:fontFamily="@font/aileron_light"/>
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="180dp"
+          android:layout_height="match_parent"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/browse"
+
+          android:orientation="vertical">
+
+         <Button
+             android:id="@+id/ig_btn_beef_chick"
+             android:layout_width="match_parent"
+             android:layout_height="110dp"
+             android:background="@drawable/chicken"
+             android:scaleType="centerCrop"
+             android:text="@string/beef_chicken"
+             android:textColor="@color/primaryTextColor"
+             android:fontFamily="@font/aileron_light"
+             />
+
+         <Button
+             android:id="@+id/ig_btn_seaf"
+             android:layout_width="match_parent"
+             android:layout_height="110dp"
+             android:layout_below="@+id/ig_btn_beef_chick"
+             android:background="@drawable/fish"
+             android:scaleType="centerCrop"
+             android:text="@string/seafood"
+             android:textColor="@color/primaryTextColor"
+             android:fontFamily="@font/aileron_light"/>
+
+         <Button
+             android:id="@+id/ig_btn_pasta"
+             android:layout_width="match_parent"
+             android:layout_height="110dp"
+             android:layout_below="@+id/ig_btn_seaf"
+             android:background="@drawable/pasta"
+             android:scaleType="centerCrop"
+             android:text="@string/pasta"
+             android:textColor="@color/primaryTextColor"
+             android:fontFamily="@font/aileron_light"/>
+
+         <Button
+             android:id="@+id/ig_btn_veg"
+             android:layout_width="match_parent"
+             android:layout_height="110dp"
+             android:layout_below="@+id/ig_btn_pasta"
+             android:background="@drawable/vegeterian"
+             android:scaleType="centerCrop"
+             android:text="@string/vegeterian"
+             android:textColor="@color/primaryTextColor"
+             android:fontFamily="@font/aileron_light"/>
+      </LinearLayout>
+
+
+   </RelativeLayout>
+
 
 </FrameLayout>
