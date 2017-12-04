@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kui.com.greenkiondo">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -34,6 +36,10 @@
         <activity android:name=".SeafoodActivity" />
         <activity android:name=".PastaActivity" />
         <activity android:name=".VegeterianActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA58mQcrFAUoV6jRKMVLNBx4p8plTLF8qM"/>
     </application>
 
 </manifest>

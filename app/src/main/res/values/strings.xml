@@ -24,4 +24,6 @@
     <string name="browse">Browse</string>
     <string name="search">Search</string>
     <string name="ingredients">Ingredients</string>
+
+    <string name="proceedLocation">Pick Location</string>
 </resources>
