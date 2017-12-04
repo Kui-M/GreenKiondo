@@ -26,4 +26,8 @@
     <string name="ingredients">Ingredients</string>
 
     <string name="proceedLocation">Pick Location</string>
+    
+    <string name="banner_home_footer">ca-app-pub-7745024037057843/1270147089</string>
+    <string name="interstitial_fullscreen">ca-app-pub-7745024037057843/7584273991</string>
+    
 </resources>
