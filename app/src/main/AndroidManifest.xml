@@ -10,9 +10,9 @@
     <application
         android:name=".AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_gk_logo_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_gk_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Instructions">
@@ -36,15 +36,17 @@
         <activity android:name=".Beef_ChickenActivity" />
         <activity android:name=".SeafoodActivity" />
         <activity android:name=".PastaActivity" />
-        <activity android:name=".VegeterianActivity"></activity>
+        <activity android:name=".VegeterianActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA58mQcrFAUoV6jRKMVLNBx4p8plTLF8qM"/>
-
+            android:value="AIzaSyA58mQcrFAUoV6jRKMVLNBx4p8plTLF8qM" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".RecipeDetailActivity" />
+        <activity android:name=".WebViewActivity"></activity>
     </application>
 
 </manifest>

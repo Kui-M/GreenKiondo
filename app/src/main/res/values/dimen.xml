@@ -8,4 +8,9 @@
 
     <dimen name="title">45dp</dimen>
     <dimen name="height">60dp</dimen>
+
+    <dimen name="recipe_title">17dp</dimen>
+    <dimen name="website_name">15dip</dimen>
+    <dimen name="genre">13dip</dimen>
+    <dimen name="year">12dip</dimen>
 </resources>

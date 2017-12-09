@@ -139,7 +139,7 @@ public class HomeFragment extends Fragment {
         btnSeafood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent seaf= new Intent(getActivity(),SeafoodActivity.class);
+                Intent seaf= new Intent(getActivity(),PlacePicker.class);
                 startActivity(seaf);
             }
         });
