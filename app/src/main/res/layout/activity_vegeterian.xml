@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="@string/vegeterian"
+        android:gravity="center"
         android:textSize="@dimen/title"
         android:textAlignment="center"
         android:fontFamily="@font/aileron_light"

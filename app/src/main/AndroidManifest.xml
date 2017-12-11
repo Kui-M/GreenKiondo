@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:name=".AppController"
@@ -15,7 +16,10 @@
         android:roundIcon="@mipmap/ic_gk_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Instructions">
+        <activity
+            android:name=".NavActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,10 +29,12 @@
         <activity android:name=".Login" />
         <activity android:name=".SignUp" />
         <activity android:name=".Home" />
-        <activity
+        <!--
+            <activity
             android:name=".NavActivity"
             android:label="Home"
             android:theme="@style/AppTheme.NoActionBar" />
+        -->
         <activity android:name=".BreakfastActivity" />
         <activity android:name=".Dinner_LunchActivity" />
         <activity android:name=".DessertActivity" />
@@ -46,7 +52,8 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".RecipeDetailActivity" />
-        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".SearchActivity"></activity>
     </application>
 
 </manifest>

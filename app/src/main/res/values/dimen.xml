@@ -6,7 +6,7 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
-    <dimen name="title">45dp</dimen>
+    <dimen name="title">30dp</dimen>
     <dimen name="height">60dp</dimen>
 
     <dimen name="recipe_title">17dp</dimen>

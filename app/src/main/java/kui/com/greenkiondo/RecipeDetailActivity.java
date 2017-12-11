@@ -31,9 +31,9 @@ import java.util.List;
 public class RecipeDetailActivity extends AppCompatActivity {
     private static final String TAG = RecipeDetailActivity.class.getSimpleName();
     private ProgressDialog pDialog;
-    private List<Recipe> recipeList = new ArrayList<Recipe>();
-    private ListView listView;
-    private RecipeListAdapter adapter;
+    private List<Ingredient> ingredientList = new ArrayList<Ingredient>();
+    private ListView iglistView;
+    private IngredientListAdapter adapter;
     TextView recipe_urlTV, recipe_idTV, recipe_titleTV;
     Button viewDir;
     Context context = this;
@@ -46,10 +46,14 @@ public class RecipeDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_detail);
 
+        iglistView = (ListView) findViewById(R.id.ingredientList);
+        adapter = new IngredientListAdapter(this,ingredientList);
+        iglistView.setAdapter(adapter);
 
-        recipe_idTV=(TextView) findViewById(R.id.recipe_id_detail);
-        recipe_titleTV=(TextView)findViewById(R.id.recipe_title_detail);
-        recipe_urlTV=(TextView)findViewById(R.id.recipe_url_detail);
+
+       // recipe_idTV=(TextView) findViewById(R.id.recipe_id_detail);
+        //recipe_titleTV=(TextView)findViewById(R.id.recipe_title_detail);
+        //recipe_urlTV=(TextView)findViewById(R.id.recipe_url_detail);
         ImageView recipeImage = (ImageView) findViewById(R.id.recipe_image_detail);
 
         Intent intent = getIntent();
@@ -69,9 +73,9 @@ public class RecipeDetailActivity extends AppCompatActivity {
                 .appendQueryParameter("rId",recipe_id_detail);
         String ingredient_url = builder.build().toString();
 
-        recipe_idTV.setText(recipe_id_detail);
-        recipe_titleTV.setText(recipe_title_detail);
-        recipe_urlTV.setText(recipe_source_url_detail);
+       // recipe_idTV.setText(recipe_id_detail);
+       // recipe_titleTV.setText(recipe_title_detail);
+       // recipe_urlTV.setText(recipe_source_url_detail);
         Picasso.with(context).load(recipe_image_url_detail).into(recipeImage);
 
         setTitle(recipe_title_detail);
@@ -90,5 +94,73 @@ public class RecipeDetailActivity extends AppCompatActivity {
 
 
 
-}
+        /* VOLLEY FOR LIST VIEW */
+
+
+        pDialog = new ProgressDialog(this);
+        // Showing progress dialog before making http request
+        pDialog.setMessage("Loading...");
+        pDialog.show();
+
+
+        // Creating volley request obj
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
+                ingredient_url, null,
+                new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d(TAG, response.toString());
+                        pDialog.hide();
+
+                        try{
+                            JSONObject jsonObject = new JSONObject(response.toString());
+
+                           JSONObject jpObject = jsonObject.getJSONObject("recipe");
+
+                            // gettiing Json Array Node
+                            JSONArray ingredientArray = jpObject.getJSONArray("ingredients");
+
+                            for (int i = 0; i < ingredientArray.length(); i++) {
+                                String ingred = (String) ingredientArray.get(i);
+                                Ingredient ig = new Ingredient();
+                                ig.setIngredient(ingred);
+
+                                ingredientList.add(ig);
+                            }
+
+                            // adding movie to movies array
+
+                        }catch(JSONException e){e.printStackTrace();}
+
+                        adapter.notifyDataSetChanged();
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d(TAG, "Error: " + error.getMessage());
+                // hide the progress dialog
+                pDialog.hide();
+            }
+        });
+
+
+        // Adding request to request queue
+        AppController.getInstance().addToRequestQueue(jsonObjReq);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        hidePDialog();
+    }
+
+    private void hidePDialog() {
+        if (pDialog != null) {
+            pDialog.dismiss();
+            pDialog = null;
+        }
+    }
+
 }
