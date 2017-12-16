@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kui.com.greenkiondo.RecipeDetailActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_mykiondo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="@string/mykiondo"
+            android:textSize="@dimen/title"
+            android:textAlignment="center"
+            android:fontFamily="@font/aileron_light"
+            android:background="@drawable/lunch_dinner"
+            android:textColor="@color/primaryTextColor"
+            android:scaleType="centerInside"
+            />
+
+        <ListView
+            android:id="@+id/ingredientList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/view_directions_detail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primaryColor"
+        android:fontFamily="@font/aileron_light"
+        android:text="Get Location and Proceed to Checkout"
+        android:textColor="@color/primaryTextColor"
+        android:layout_alignParentBottom="true"
+
+        />
+
+
+
+</RelativeLayout>

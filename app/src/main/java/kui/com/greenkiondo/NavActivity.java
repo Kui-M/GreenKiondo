@@ -111,12 +111,14 @@ public class NavActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, homeFragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_my_kiondo) {
-            My_Kiondo_Fragment my_kiondo_fragment
+            /*My_Kiondo_Fragment my_kiondo_fragment
                     = new My_Kiondo_Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, my_kiondo_fragment);
-            fragmentTransaction.commit();
+            fragmentTransaction.commit();*/
+            Intent kiondo = new Intent(NavActivity.this,MyKiondoActivity.class);
+            startActivity(kiondo);
 
         } else if (id == R.id.nav_my_recipies) {
             My_Recipies_Fragment my_recipies_fragment = new My_Recipies_Fragment();
