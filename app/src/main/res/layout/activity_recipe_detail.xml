@@ -22,31 +22,13 @@
                 tools:src="@mipmap/ic_launcher"
                 android:contentDescription="pic"
 
-
                 />
-            <!--<TextView
-                android:id="@+id/recipe_title_detail"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="title"/>-->
-           <!-- <TextView
-                android:id="@+id/recipe_url_detail"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="recipie url"/>-->
-           <!-- <TextView
-                android:id="@+id/recipe_id_detail"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="recipe id"/>-->
 
             <ListView
                 android:id="@+id/ingredientList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></ListView>
         </LinearLayout>
-
-
     <Button
         android:id="@+id/view_directions_detail"
         android:layout_width="match_parent"
@@ -56,8 +38,38 @@
         android:text="View Directions"
         android:textColor="@color/primaryTextColor"
         android:layout_alignParentBottom="true"
-
         />
+
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:visibility="visible"
+        android:id="@+id/progressBar"
+        android:gravity="center"
+        android:layout_below="@+id/tv_chick"
+        >
+
+        <ProgressBar
+            android:id="@+id/progressIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_progressbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp" />
+        <TextView
+            android:id="@+id/tv_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="@string/progress_text_ingredients"
+            android:textSize="@dimen/title"
+            android:textAlignment="center"
+            android:fontFamily="@font/aileron_light"
+            android:textColor="@color/black"
+            android:scaleType="centerInside"
+            />
+    </RelativeLayout>
 
 
 

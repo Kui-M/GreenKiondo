@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -97,12 +98,15 @@ public class RecipeDetailActivity extends AppCompatActivity {
         /* VOLLEY FOR LIST VIEW */
 
 
-        pDialog = new ProgressDialog(this);
+       /* pDialog = new ProgressDialog(this);
         // Showing progress dialog before making http request
         pDialog.setMessage("Loading...");
         pDialog.show();
+*/
 
-
+        final RelativeLayout progressBar = (RelativeLayout) findViewById(R.id.progressBar);
+        //making the progressbar visible
+        progressBar.setVisibility(View.VISIBLE);
         // Creating volley request obj
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
                 ingredient_url, null,
@@ -111,7 +115,8 @@ public class RecipeDetailActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d(TAG, response.toString());
-                        pDialog.hide();
+                        progressBar.setVisibility(View.INVISIBLE);
+                        //pDialog.hide();
 
                         try{
                             JSONObject jsonObject = new JSONObject(response.toString());

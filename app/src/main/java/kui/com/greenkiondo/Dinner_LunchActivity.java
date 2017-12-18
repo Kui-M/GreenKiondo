@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -71,11 +72,13 @@ public class Dinner_LunchActivity extends AppCompatActivity {
         });
 
 
-        pDialog = new ProgressDialog(this);
+       /* pDialog = new ProgressDialog(this);
         // Showing progress dialog before making http request
         pDialog.setMessage("Loading...");
-        pDialog.show();
-
+        pDialog.show();*/
+        final RelativeLayout progressBar = (RelativeLayout) findViewById(R.id.progressBar);
+        //making the progressbar visible
+        progressBar.setVisibility(View.VISIBLE);
 
         // Creating volley request obj
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
@@ -85,7 +88,8 @@ public class Dinner_LunchActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d(TAG, response.toString());
-                        pDialog.hide();
+                        progressBar.setVisibility(View.INVISIBLE);
+                       // pDialog.hide();
 
                         try{
                             JSONObject jsonObject = new JSONObject(response.toString());
