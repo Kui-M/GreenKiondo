@@ -59,10 +59,10 @@ public class RecipeListAdapter extends BaseAdapter{
 
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
-        NetworkImageView thumbNail = (NetworkImageView) convertView
+        NetworkImageView thumbNail = convertView
                 .findViewById(R.id.thumbnail);
-        TextView recipe_title = (TextView) convertView.findViewById(R.id.recipe_title);
-        TextView publisher = (TextView) convertView.findViewById(R.id.publisher);
+        TextView recipe_title = convertView.findViewById(R.id.recipe_title);
+        TextView publisher = convertView.findViewById(R.id.publisher);
 
         // getting movie data for the row
         Recipe r = recipeItems.get(position);

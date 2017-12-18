@@ -15,7 +15,7 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        searchView=(SearchView) findViewById(R.id.searchView);
+        searchView= findViewById(R.id.searchView);
        // searchView.setQueryHint("Search View");
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

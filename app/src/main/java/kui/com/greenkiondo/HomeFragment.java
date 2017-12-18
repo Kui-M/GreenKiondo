@@ -73,7 +73,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-      btnBreakfast = (Button)rootView.findViewById(R.id.ig_btn_bfast);
+      btnBreakfast = rootView.findViewById(R.id.ig_btn_bfast);
       btnBreakfast.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
@@ -82,7 +82,7 @@ public class HomeFragment extends Fragment {
           }
       });
 
-        btnBeefChicken = (Button)rootView.findViewById(R.id.ig_btn_beef_chick);
+        btnBeefChicken = rootView.findViewById(R.id.ig_btn_beef_chick);
         btnBeefChicken.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,7 +91,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btnPasta = (Button)rootView.findViewById(R.id.ig_btn_pasta);
+        btnPasta = rootView.findViewById(R.id.ig_btn_pasta);
         btnPasta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,7 +99,7 @@ public class HomeFragment extends Fragment {
                 startActivity(pasta);
             }
         });
-        btnVegeterian = (Button)rootView.findViewById(R.id.ig_btn_veg);
+        btnVegeterian = rootView.findViewById(R.id.ig_btn_veg);
         btnVegeterian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,7 +108,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btnDessert = (Button)rootView.findViewById(R.id.ig_btn_dess);
+        btnDessert = rootView.findViewById(R.id.ig_btn_dess);
         btnDessert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,7 +117,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btnDrink = (Button)rootView.findViewById(R.id.ig_btn_drinks);
+        btnDrink = rootView.findViewById(R.id.ig_btn_drinks);
         btnDrink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -126,7 +126,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btnDinnerLunch = (Button)rootView.findViewById(R.id.ig_btn_din_ln);
+        btnDinnerLunch = rootView.findViewById(R.id.ig_btn_din_ln);
         btnDinnerLunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -135,7 +135,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btnSeafood = (Button)rootView.findViewById(R.id.ig_btn_seaf);
+        btnSeafood = rootView.findViewById(R.id.ig_btn_seaf);
         btnSeafood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

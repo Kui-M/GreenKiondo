@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,7 +25,7 @@
                 android:layout_above="@+id/lPassword"
                 android:layout_alignStart="@+id/lPassword"
                 android:background="#CCffffff"
-                android:ems="10"
+                android:ems="11"
                 android:fontFamily="@font/aileron"
                 android:hint="Email"
                 android:inputType="textPersonName"
@@ -42,7 +41,7 @@
                 android:layout_above="@+id/Login_B"
                 android:layout_centerHorizontal="true"
                 android:background="#CCffffff"
-                android:ems="10"
+                android:ems="11"
                 android:fontFamily="@font/aileron"
                 android:hint="Password"
                 android:inputType="textPassword"
@@ -54,8 +53,8 @@
 
             <Button
                 android:id="@+id/btn_login"
-                android:layout_width="228dp"
-                android:layout_height="51dp"
+                android:layout_width="@dimen/loginButtonWidth"
+                android:layout_height="@dimen/loginButtonHeight"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:background="@color/primaryDarkColor"
@@ -64,7 +63,7 @@
                 android:textColor="@color/secondaryTextColor"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="20dp"/>
 
             <android.support.v7.widget.AppCompatTextView
 
@@ -81,8 +80,8 @@
 
             <Button
                 android:id="@+id/btn_login_signup"
-                android:layout_width="228dp"
-                android:layout_height="51dp"
+                android:layout_width="@dimen/loginButtonWidth"
+                android:layout_height="@dimen/loginButtonHeight"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:background="@color/primaryDarkColor"
