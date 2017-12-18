@@ -54,7 +54,10 @@
         <activity android:name=".RecipeDetailActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".SearchActivity" />
-        <activity android:name=".MyKiondoActivity"></activity>
+        <activity android:name=".MyKiondoActivity"/>
+        <activity android:name=".PickLocation"/>
+        <activity android:name=".Final">
+        </activity>
     </application>
 
 </manifest>

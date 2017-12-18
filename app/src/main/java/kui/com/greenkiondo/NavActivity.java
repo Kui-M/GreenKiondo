@@ -39,7 +39,6 @@ public class NavActivity extends AppCompatActivity
         if(!isConnected(NavActivity.this)) buildDialog(NavActivity.this).show();
 
         else {
-            Toast.makeText(NavActivity.this,"Welcome To Green Kiondo", Toast.LENGTH_SHORT).show();
             setContentView(R.layout.activity_nav);
         }
 
@@ -77,23 +76,11 @@ public class NavActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.nav, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -119,14 +106,6 @@ public class NavActivity extends AppCompatActivity
             fragmentTransaction.commit();*/
             Intent kiondo = new Intent(NavActivity.this,MyKiondoActivity.class);
             startActivity(kiondo);
-
-        } else if (id == R.id.nav_my_recipies) {
-            My_Recipies_Fragment my_recipies_fragment = new My_Recipies_Fragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, my_recipies_fragment);
-            fragmentTransaction.commit();
-
         } else if (id == R.id.nav_search) {
            /*SearchFragment searchFragment = new SearchFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
@@ -135,14 +114,6 @@ public class NavActivity extends AppCompatActivity
             fragmentTransaction.commit();*/
            Intent search = new Intent(NavActivity.this,SearchActivity.class);
            startActivity(search);
-
-        } else if (id == R.id.nav_settings) {
-           SettingsFragment settingsFragment = new SettingsFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, settingsFragment);
-            fragmentTransaction.commit();
-
         } else if (id == R.id.nav_about) {
             AboutFragment aboutFragment = new AboutFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =

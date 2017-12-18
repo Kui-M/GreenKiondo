@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -37,6 +38,9 @@ public class Dinner_LunchActivity extends AppCompatActivity {
     private RecipeListAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dinner__lunch);
         listView = (ListView) findViewById(R.id.list_dinlin);
@@ -47,7 +51,6 @@ public class Dinner_LunchActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"You clicked "+ position,Toast.LENGTH_SHORT).show();
 
                 String passRecipe_id = String.valueOf(recipeList.get(position).getRecipe_id());
                 String passRecipe_title = String.valueOf(recipeList.get(position).getRecipe_title());
@@ -143,8 +146,10 @@ public class Dinner_LunchActivity extends AppCompatActivity {
         }
     }
 
-
-
-
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getApplicationContext(), NavActivity.class);
+        startActivityForResult(myIntent, 0);
+        return true;
+    }
 
 }

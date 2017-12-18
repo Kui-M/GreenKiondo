@@ -6,9 +6,11 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
@@ -17,17 +19,16 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.Places;
 
-public class PlacePicker extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
-
+public class PickLocation extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     private GoogleApiClient mGoogleApiClient;
     private int PLACE_PICKER_REQUEST = 1;
-    private TextView showDetails;
-    private Button getLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pick_location);
 
         initializeViews();
 
@@ -38,25 +39,15 @@ public class PlacePicker extends AppCompatActivity implements GoogleApiClient.On
                 .enableAutoManage(this, this)
                 .build();
 
-
-        getLocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                com.google.android.gms.location.places.ui.PlacePicker.IntentBuilder builder = new com.google.android.gms.location.places.ui.PlacePicker.IntentBuilder();
-                try {
-                    startActivityForResult(builder.build(PlacePicker.this), PLACE_PICKER_REQUEST);
-                } catch (GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
     }
 
     private void initializeViews() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getLocation = (Button) findViewById(R.id.getLocation);
-        showDetails = (TextView) findViewById(R.id.placePickerText);
+        com.google.android.gms.location.places.ui.PlacePicker.IntentBuilder builder = new com.google.android.gms.location.places.ui.PlacePicker.IntentBuilder();
+        try {
+            startActivityForResult(builder.build(PickLocation.this), PLACE_PICKER_REQUEST);
+        } catch (GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -73,7 +64,9 @@ public class PlacePicker extends AppCompatActivity implements GoogleApiClient.On
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        Snackbar.make(getLocation, connectionResult.getErrorMessage() + "", Snackbar.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),
+                "Connection failed. Please try again.", Toast.LENGTH_LONG)
+                .show();
     }
 
     @Override
@@ -81,25 +74,25 @@ public class PlacePicker extends AppCompatActivity implements GoogleApiClient.On
         if (requestCode == PLACE_PICKER_REQUEST) {
             if (resultCode == RESULT_OK) {
                 Place place = com.google.android.gms.location.places.ui.PlacePicker.getPlace(data, this);
-                StringBuilder stBuilder = new StringBuilder();
                 String placename = String.format("%s", place.getName());
                 String latitude = String.valueOf(place.getLatLng().latitude);
                 String longitude = String.valueOf(place.getLatLng().longitude);
                 String address = String.format("%s", place.getAddress());
-                stBuilder.append("Name: ");
-                stBuilder.append(placename);
-                stBuilder.append("\n");
-                stBuilder.append("Latitude: ");
-                stBuilder.append(latitude);
-                stBuilder.append("\n");
-                stBuilder.append("Longitude: ");
-                stBuilder.append(longitude);
-                stBuilder.append("\n");
-                stBuilder.append("Address: ");
-                stBuilder.append(address);
-                showDetails.setText(stBuilder.toString());
 
+                Intent intent = new Intent(getApplicationContext(), Final.class);
+                    intent.putExtra("placename", placename);
+                    intent.putExtra("latitude", latitude);
+                    intent.putExtra("longitude", longitude);
+                    intent.putExtra("address", address);
+                    startActivity(intent);
             }
         }
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getApplicationContext(), MyKiondoActivity.class);
+        startActivityForResult(myIntent, 0);
+        return true;
+
     }
 }

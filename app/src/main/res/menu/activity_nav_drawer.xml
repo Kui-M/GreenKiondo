@@ -15,11 +15,6 @@
             android:title="My Kiondo"
             android:fontFamily="@font/aileron_light"/>
         <item
-            android:id="@+id/nav_my_recipies"
-            android:icon="@drawable/ic_recipies"
-            android:title="My Recipies"
-            android:fontFamily="@font/aileron_light"/>
-        <item
             android:id="@+id/nav_search"
             android:icon="@drawable/ic_search"
             android:title="Search"
@@ -31,11 +26,6 @@
     <item android:title="Other"
         android:fontFamily="@font/aileron_light">
         <menu>
-            <item
-                android:id="@+id/nav_settings"
-                android:icon="@drawable/ic_action_name"
-                android:title="Settings"
-                android:fontFamily="@font/aileron_light"/>
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_info"
