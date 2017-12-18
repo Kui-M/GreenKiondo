@@ -27,9 +27,8 @@
          <Button
              android:id="@+id/ig_btn_bfast"
              android:layout_width="match_parent"
-             android:layout_height="110dp"
+             android:layout_height="124dp"
              android:background="@drawable/breakfast"
-
              android:scaleType="centerCrop"
              android:text="@string/breakfast"
              android:textColor="@color/primaryTextColor"
@@ -38,7 +37,7 @@
          <Button
              android:id="@+id/ig_btn_din_ln"
              android:layout_width="match_parent"
-             android:layout_height="110dp"
+             android:layout_height="124dp"
              android:layout_below="@+id/ig_btn_bfast"
              android:background="@drawable/lunch_dinner"
              android:scaleType="centerCrop"
@@ -49,7 +48,7 @@
          <Button
              android:id="@+id/ig_btn_dess"
              android:layout_width="match_parent"
-             android:layout_height="110dp"
+             android:layout_height="124dp"
              android:layout_below="@+id/ig_btn_din_ln"
              android:background="@drawable/dessert"
              android:scaleType="centerCrop"
@@ -60,7 +59,7 @@
          <Button
              android:id="@+id/ig_btn_drinks"
              android:layout_width="match_parent"
-             android:layout_height="110dp"
+             android:layout_height="124dp"
              android:layout_below="@+id/ig_btn_dess"
              android:background="@drawable/drinks"
              android:scaleType="centerCrop"
@@ -81,7 +80,7 @@
          <Button
              android:id="@+id/ig_btn_beef_chick"
              android:layout_width="match_parent"
-             android:layout_height="110dp"
+             android:layout_height="124dp"
              android:background="@drawable/chicken"
              android:scaleType="centerCrop"
              android:text="@string/beef_chicken"
@@ -92,7 +91,7 @@
          <Button
              android:id="@+id/ig_btn_seaf"
              android:layout_width="match_parent"
-             android:layout_height="110dp"
+             android:layout_height="124dp"
              android:layout_below="@+id/ig_btn_beef_chick"
              android:background="@drawable/fish"
              android:scaleType="centerCrop"
@@ -103,7 +102,7 @@
          <Button
              android:id="@+id/ig_btn_pasta"
              android:layout_width="match_parent"
-             android:layout_height="110dp"
+             android:layout_height="124dp"
              android:layout_below="@+id/ig_btn_seaf"
              android:background="@drawable/pasta"
              android:scaleType="centerCrop"
@@ -114,7 +113,7 @@
          <Button
              android:id="@+id/ig_btn_veg"
              android:layout_width="match_parent"
-             android:layout_height="110dp"
+             android:layout_height="124dp"
              android:layout_below="@+id/ig_btn_pasta"
              android:background="@drawable/vegeterian"
              android:scaleType="centerCrop"
