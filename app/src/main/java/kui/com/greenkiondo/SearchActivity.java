@@ -157,7 +157,6 @@ public class SearchActivity extends AppCompatActivity {
                 rdetail.putExtra("publisher",passRecipe_publisher);
                 rdetail.putExtra("image_url",passRecipe_image_url);
                 rdetail.putExtra("source_url",passRecipe_source_url);
-                // detailIntent.putExtra("recipe_id",selectedRecipie.get(KEY_RECIPIE_ID));
 
                 startActivity(rdetail);
 
@@ -169,18 +168,7 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        hidePDialog();
-    }
 
-    private void hidePDialog() {
-        if (pDialog != null) {
-            pDialog.dismiss();
-            pDialog = null;
-        }
-    }
 
     public boolean onOptionsItemSelected(MenuItem item){
         Intent myIntent = new Intent(getApplicationContext(), NavActivity.class);
