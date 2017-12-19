@@ -98,20 +98,9 @@ public class NavActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, homeFragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_my_kiondo) {
-            /*My_Kiondo_Fragment my_kiondo_fragment
-                    = new My_Kiondo_Fragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, my_kiondo_fragment);
-            fragmentTransaction.commit();*/
             Intent kiondo = new Intent(NavActivity.this,MyKiondoActivity.class);
             startActivity(kiondo);
         } else if (id == R.id.nav_search) {
-           /*SearchFragment searchFragment = new SearchFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, searchFragment);
-            fragmentTransaction.commit();*/
            Intent search = new Intent(NavActivity.this,SearchActivity.class);
            startActivity(search);
         } else if (id == R.id.nav_about) {
@@ -120,7 +109,13 @@ public class NavActivity extends AppCompatActivity
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, aboutFragment);
             fragmentTransaction.commit();
-        }  else if (id == R.id.nav_logout) {
+        }   else if (id == R.id.nav_settings) {
+        SettingsFragment settingsFragment = new SettingsFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction =
+                getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, settingsFragment);
+        fragmentTransaction.commit();
+    }else if (id == R.id.nav_logout) {
            session.logoutUser();
     }
 

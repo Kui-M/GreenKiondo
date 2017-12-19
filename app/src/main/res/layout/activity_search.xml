@@ -6,25 +6,73 @@
     android:layout_height="match_parent"
     tools:context="kui.com.greenkiondo.SearchActivity">
 
+    <EditText
+        android:id="@+id/ed_search"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:hint="Search"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_search_recipe"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/ed_search"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/ic_search" />
+
     <LinearLayout
+
+        android:layout_below="@+id/btn_search_recipe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="300dp"
-            android:layout_gravity="center_horizontal"
-            android:elevation="3dp"
-            android:layout_marginTop="20dp"
-            android:background="#fff"
-            android:queryHint="Search Recipes"
-            android:layout_height="wrap_content">
-        </SearchView>
-<ListView
-    android:id="@+id/searchListView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></ListView>
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <ListView
+            android:id="@+id/searchListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"></ListView>
 
     </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:gravity="center"
+
+        >
+
+        <ProgressBar
+            android:id="@+id/progressIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_progressbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+           />
+        <TextView
+            android:id="@+id/tv_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="@string/progress_text"
+            android:textSize="@dimen/title"
+            android:textAlignment="center"
+            android:fontFamily="@font/aileron_light"
+            android:textColor="@color/black"
+            android:scaleType="centerInside"
+            />
+    </RelativeLayout>
 
 </RelativeLayout>
