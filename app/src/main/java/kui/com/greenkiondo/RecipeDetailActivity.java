@@ -11,11 +11,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -38,12 +40,11 @@ public class RecipeDetailActivity extends AppCompatActivity {
     private List<Ingredient> ingredientList = new ArrayList<>();
     private ListView iglistView;
     private IngredientListAdapter adapter;
-    TextView recipe_urlTV, recipe_idTV, recipe_titleTV;
     Button viewDir;
+    private SQLiteHandler db;
     Context context = this;
 
     String recipe_id_detail,recipe_title_detail,recipe_source_url_detail,recipe_image_url_detail,recipe_publisher;
-    static final String KEY_RECIPIE_INGREDIENT = "recipe_ingredient";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +59,18 @@ public class RecipeDetailActivity extends AppCompatActivity {
         iglistView.setAdapter(adapter);
 
 
-       // recipe_idTV=(TextView) findViewById(R.id.recipe_id_detail);
-        //recipe_titleTV=(TextView)findViewById(R.id.recipe_title_detail);
-        //recipe_urlTV=(TextView)findViewById(R.id.recipe_url_detail);
+        iglistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                String passIgName = String.valueOf(ingredientList.get(position).getIngredient());
+                Toast.makeText(getApplicationContext(),
+                        passIgName +"recipe name:"+ recipe_title_detail, Toast.LENGTH_LONG).show();
+                db = new SQLiteHandler(getApplicationContext());
+               db.addIngredient(passIgName,recipe_title_detail);
+            }
+        });
+
         ImageView recipeImage = findViewById(R.id.recipe_image_detail);
 
         Intent intent = getIntent();
@@ -80,9 +90,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
                 .appendQueryParameter("rId",recipe_id_detail);
         String ingredient_url = builder.build().toString();
 
-       // recipe_idTV.setText(recipe_id_detail);
-       // recipe_titleTV.setText(recipe_title_detail);
-       // recipe_urlTV.setText(recipe_source_url_detail);
+
         Picasso.with(context).load(recipe_image_url_detail).into(recipeImage);
 
         setTitle(recipe_title_detail);

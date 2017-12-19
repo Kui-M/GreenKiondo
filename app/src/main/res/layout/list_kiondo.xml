@@ -6,7 +6,7 @@
     android:padding="8dp" >
 
     <!-- Add icon -->
-    <ImageView
+  <!--  <ImageView
         android:id="@+id/add_icon"
         android:layout_width="15dp"
         android:layout_height="15dp"
@@ -14,16 +14,15 @@
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_marginRight="8dp"
-        android:background="@drawable/plus"/>
+        android:background="@drawable/plus"/>-->
 
     <!-- Recipe Title -->
     <TextView
-        android:id="@+id/recipe_ingredient"
-        android:text="Recipe Ingredient"
+        android:id="@+id/kiondo_ingredient"
+        android:text="Kiondo Ingredient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/add_icon"
-        android:layout_toRightOf="@+id/add_icon"
+
         android:textSize="@dimen/recipe_title"
         android:textStyle="bold"
         android:fontFamily="@font/aileron_light"/>

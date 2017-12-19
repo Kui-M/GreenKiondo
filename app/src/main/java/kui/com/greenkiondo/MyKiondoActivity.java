@@ -1,14 +1,30 @@
 package kui.com.greenkiondo;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class MyKiondoActivity extends AppCompatActivity {
+
+    private SQLiteDatabase ingredients;
+    private SQLiteHandler db;
+    KiondoListAdapter kadapter;
+    ListView kiondoList;
+    HashMap<String, String> kiondo_ingredient_map;
+    /*Variables to hold the records*/
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +33,13 @@ public class MyKiondoActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_kiondo);
+
+
+        db = new SQLiteHandler(this);
+
+
+        kiondoList = (ListView) findViewById(R.id.kiondoList);
+        kiondoList.setAdapter(kadapter);
 
         Button checkout = findViewById(R.id.view_directions_detail);
         checkout.setOnClickListener(new View.OnClickListener() {
