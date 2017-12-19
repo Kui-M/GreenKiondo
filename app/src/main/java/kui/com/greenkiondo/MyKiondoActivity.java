@@ -18,11 +18,14 @@ import java.util.Set;
 
 public class MyKiondoActivity extends AppCompatActivity {
 
-    private SQLiteDatabase ingredients;
-    private SQLiteHandler db;
-    KiondoListAdapter kadapter;
-    ListView kiondoList;
-    HashMap<String, String> kiondo_ingredient_map;
+
+    private SQLiteHandler db = null;
+    KiondoListAdapter kadapter = null;
+    ListView kiondoListView = null;
+    ArrayList<Ingredient> kiondoItems = null;
+
+
+
     /*Variables to hold the records*/
 
 
@@ -36,10 +39,13 @@ public class MyKiondoActivity extends AppCompatActivity {
 
 
         db = new SQLiteHandler(this);
+        kiondoItems = db.getIngredients();
+        kadapter = new KiondoListAdapter(this,R.layout.list_kiondo,kiondoItems);
+
+        kiondoListView = (ListView)findViewById(R.id.kiondoList);
+        kiondoListView.setAdapter(kadapter);
 
 
-        kiondoList = findViewById(R.id.kiondoList);
-        kiondoList.setAdapter(kadapter);
 
         Button checkout = findViewById(R.id.view_directions_detail);
         checkout.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +59,8 @@ public class MyKiondoActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
-        finish();
+        Intent myIntent = new Intent(getApplicationContext(), NavActivity.class);
+        startActivityForResult(myIntent, 0);
         return true;
     }
 

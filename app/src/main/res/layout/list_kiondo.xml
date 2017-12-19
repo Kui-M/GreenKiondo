@@ -27,4 +27,14 @@
         android:textStyle="bold"
         android:fontFamily="@font/aileron_light"/>
 
+    <TextView
+        android:id="@+id/recipe_title_kiondo"
+        android:text="Recipe Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kiondo_ingredient"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/aileron_light"/>
+
 </RelativeLayout>

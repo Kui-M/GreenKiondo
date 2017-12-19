@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -165,7 +166,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 
     }
 
-    public HashMap<String,String> getIngredients(){
+   /* public HashMap<String,String> getIngredients(){
         HashMap<String, String> ingredient = new HashMap<>();
         String selectQuery = "SELECT  * FROM " + TABLE_INGREDIENTS;
 
@@ -183,7 +184,21 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         Log.d(TAG, "Fetching Ingredient from Sqlite: " + ingredient.toString());
 
         return ingredient;
-    }
+    }*/
+
+   public ArrayList<Ingredient> getIngredients(){
+       SQLiteDatabase db = this.getReadableDatabase();
+       ArrayList<Ingredient> ig= new ArrayList<Ingredient>();
+       String selectQuery = "SELECT  * FROM " + TABLE_INGREDIENTS;
+
+       Cursor result = db.rawQuery(selectQuery , null);
+       while(result.moveToNext()){
+           ig.add( new Ingredient(result.getString(result.getColumnIndex(KEY_INGREDIENT)),
+                   result.getString(result.getColumnIndex(KEY_RECIPE_NAME))));
+
+       }
+       return ig;
+   }
 
     public void  deleteIngredient(){
         SQLiteDatabase db = this.getWritableDatabase();
