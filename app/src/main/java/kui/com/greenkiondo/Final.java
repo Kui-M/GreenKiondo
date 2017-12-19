@@ -23,14 +23,13 @@ public class Final extends AppCompatActivity {
         showDetails = findViewById(R.id.checkout);
 
         Bundle extras = getIntent().getExtras();
-        //String placename = extras.getString("placename");
         //String latitude = extras.getString("latitude");
         //String longitude = extras.getString("longitude");
+        String placename = extras.getString("placename");
         String address = extras.getString("address");
 
         StringBuilder stBuilder = new StringBuilder();
         /*stBuilder.append("Name: ");
-        stBuilder.append(placename);
         stBuilder.append("\n");
         stBuilder.append("Latitude: ");
         stBuilder.append(latitude);
@@ -39,6 +38,8 @@ public class Final extends AppCompatActivity {
         stBuilder.append(longitude);
         stBuilder.append("\n");
         */stBuilder.append("Your Kiondo will be sent to: ");
+        stBuilder.append("\n");
+        stBuilder.append(placename);
         stBuilder.append("\n");
         stBuilder.append(address);
         showDetails.setText(stBuilder.toString());

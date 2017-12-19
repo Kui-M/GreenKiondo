@@ -34,7 +34,7 @@ public class SeafoodActivity extends AppCompatActivity {
     // Movies json url
     private static final String url = "http://food2fork.com/api/search?key=965c095439caf056aa29b3f87c0f71ae&q=seafood";
     private ProgressDialog pDialog;
-    private List<Recipe> recipeList = new ArrayList<Recipe>();
+    private List<Recipe> recipeList = new ArrayList<>();
     private ListView listView;
     private RecipeListAdapter adapter;
 
@@ -45,7 +45,7 @@ public class SeafoodActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seafood);
-        listView = (ListView) findViewById(R.id.list_sef);
+        listView = findViewById(R.id.list_sef);
         adapter = new RecipeListAdapter(this, recipeList);
         listView.setAdapter(adapter);
 
@@ -80,7 +80,7 @@ public class SeafoodActivity extends AppCompatActivity {
         pDialog.setMessage("Loading...");
         pDialog.show();*/
 
-        final RelativeLayout progressBar = (RelativeLayout) findViewById(R.id.progressBar);
+        final RelativeLayout progressBar = findViewById(R.id.progressBar);
         //making the progressbar visible
         progressBar.setVisibility(View.VISIBLE);
 

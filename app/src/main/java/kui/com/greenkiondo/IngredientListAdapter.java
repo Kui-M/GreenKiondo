@@ -55,7 +55,7 @@ public class IngredientListAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.list_recipe_ingredient, null);
 
 
-        TextView recipe_ingredient = (TextView) convertView.findViewById(R.id.recipe_ingredient);
+        TextView recipe_ingredient = convertView.findViewById(R.id.recipe_ingredient);
 
 
         // getting movie data for the row

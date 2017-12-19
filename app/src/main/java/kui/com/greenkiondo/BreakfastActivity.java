@@ -35,7 +35,7 @@ public class BreakfastActivity extends AppCompatActivity {
     // Movies json url
     private static final String url = "http://food2fork.com/api/search?key=965c095439caf056aa29b3f87c0f71ae&q=breakfast";
     private ProgressDialog pDialog;
-    private List<Recipe> recipeList = new ArrayList<Recipe>();
+    private List<Recipe> recipeList = new ArrayList<>();
     private ListView listView;
     private RecipeListAdapter adapter;
 
@@ -47,7 +47,7 @@ public class BreakfastActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast);
 
-        listView = (ListView) findViewById(R.id.list_bfast);
+        listView = findViewById(R.id.list_bfast);
         adapter = new RecipeListAdapter(this, recipeList);
         listView.setAdapter(adapter);
 
@@ -84,7 +84,7 @@ public class BreakfastActivity extends AppCompatActivity {
         pDialog.setMessage("Loading...");
         pDialog.show();*/
 
-        final RelativeLayout progressBar = (RelativeLayout) findViewById(R.id.progressBar);
+        final RelativeLayout progressBar = findViewById(R.id.progressBar);
         //making the progressbar visible
         progressBar.setVisibility(View.VISIBLE);
 

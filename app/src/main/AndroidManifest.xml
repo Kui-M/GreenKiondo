@@ -56,6 +56,7 @@
         <activity android:name=".SearchActivity" />
         <activity android:name=".MyKiondoActivity"/>
         <activity android:name=".PickLocation"/>
+        <activity android:name=".Instructions"/>
         <activity android:name=".Final">
         </activity>
     </application>

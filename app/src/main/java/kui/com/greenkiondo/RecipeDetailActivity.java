@@ -33,7 +33,7 @@ import java.util.List;
 public class RecipeDetailActivity extends AppCompatActivity {
     private static final String TAG = RecipeDetailActivity.class.getSimpleName();
     private ProgressDialog pDialog;
-    private List<Ingredient> ingredientList = new ArrayList<Ingredient>();
+    private List<Ingredient> ingredientList = new ArrayList<>();
     private ListView iglistView;
     private IngredientListAdapter adapter;
     TextView recipe_urlTV, recipe_idTV, recipe_titleTV;
@@ -51,7 +51,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_detail);
 
-        iglistView = (ListView) findViewById(R.id.ingredientList);
+        iglistView = findViewById(R.id.ingredientList);
         adapter = new IngredientListAdapter(this,ingredientList);
         iglistView.setAdapter(adapter);
 
@@ -59,7 +59,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
        // recipe_idTV=(TextView) findViewById(R.id.recipe_id_detail);
         //recipe_titleTV=(TextView)findViewById(R.id.recipe_title_detail);
         //recipe_urlTV=(TextView)findViewById(R.id.recipe_url_detail);
-        ImageView recipeImage = (ImageView) findViewById(R.id.recipe_image_detail);
+        ImageView recipeImage = findViewById(R.id.recipe_image_detail);
 
         Intent intent = getIntent();
 
@@ -85,7 +85,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
 
         setTitle(recipe_title_detail);
 
-        viewDir = (Button)findViewById(R.id.view_directions_detail);
+        viewDir = findViewById(R.id.view_directions_detail);
         viewDir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,7 +108,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
         pDialog.show();
 */
 
-        final RelativeLayout progressBar = (RelativeLayout) findViewById(R.id.progressBar);
+        final RelativeLayout progressBar = findViewById(R.id.progressBar);
         //making the progressbar visible
         progressBar.setVisibility(View.VISIBLE);
         // Creating volley request obj
