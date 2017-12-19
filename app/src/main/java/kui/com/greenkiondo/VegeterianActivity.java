@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -44,7 +43,7 @@ public class VegeterianActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vegeterian);
+        setContentView(R.layout.activity_vegetarian);
         listView = findViewById(R.id.list_veg);
         adapter = new RecipeListAdapter(this, recipeList);
         listView.setAdapter(adapter);

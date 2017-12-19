@@ -141,7 +141,7 @@
                   android:background="@drawable/vegeterian"
                   android:fontFamily="@font/aileron_light"
                   android:scaleType="centerCrop"
-                  android:text="@string/vegeterian"
+                  android:text="@string/vegetarian"
                   android:textColor="@color/primaryTextColor"
                   android:layout_weight="1"/>
           </LinearLayout>

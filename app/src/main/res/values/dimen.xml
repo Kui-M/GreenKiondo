@@ -10,6 +10,7 @@
     <dimen name="loginButtonHeight">45dp</dimen>
 
     <dimen name="title">20dp</dimen>
+    <dimen name="pBarText">20dp</dimen>
     <dimen name="height">60dp</dimen>
 
     <dimen name="recipe_title">17dp</dimen>

@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:text="@string/progress_text"
-            android:textSize="@dimen/title"
+            android:textSize="@dimen/pBarText"
             android:textAlignment="center"
             android:fontFamily="@font/aileron_light"
             android:textColor="@color/black"

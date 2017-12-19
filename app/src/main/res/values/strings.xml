@@ -11,14 +11,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--Tile names -->
-    <string name="breakfast">Breakfast</string>
-    <string name="dinner_lunch">Dinner/Lunch</string>
-    <string name="dessert">Dessert</string>
-    <string name="drinks">Drinks</string>
-    <string name="beef_chicken">Beef/Chicken</string>
-    <string name="pasta">Pasta</string>
-    <string name="vegeterian">Vegeterian</string>
-    <string name="seafood">Seafood</string>
+    <string name="breakfast">B R E A K F A S T</string>
+    <string name="dinner_lunch">D I N N E R/ L U N C H</string>
+    <string name="dessert">D E S S E R T</string>
+    <string name="drinks">D R I N K S</string>
+    <string name="beef_chicken">B E E F/ C H I C K E N</string>
+    <string name="pasta">P A S T A</string>
+    <string name="vegetarian">V E G E T A R I A N</string>
+    <string name="seafood">S E A F O O D</string>
     <string name="mykiondo">My Kiondo</string>
     <string name="browse">Browse</string>
     <string name="search">Search</string>
