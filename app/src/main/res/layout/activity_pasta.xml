@@ -16,7 +16,7 @@
         android:fontFamily="@font/aileron_light"
         android:background="@drawable/pasta"
         android:textColor="@color/primaryTextColor"
-        android:scaleType="centerInside"
+        android:scaleType="centerCrop"
         />
     <ListView
         android:id="@+id/list_pasta"

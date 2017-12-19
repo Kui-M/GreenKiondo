@@ -38,7 +38,7 @@ public class MyKiondoActivity extends AppCompatActivity {
         db = new SQLiteHandler(this);
 
 
-        kiondoList = (ListView) findViewById(R.id.kiondoList);
+        kiondoList = findViewById(R.id.kiondoList);
         kiondoList.setAdapter(kadapter);
 
         Button checkout = findViewById(R.id.view_directions_detail);
@@ -53,8 +53,7 @@ public class MyKiondoActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
-        Intent myIntent = new Intent(getApplicationContext(), NavActivity.class);
-        startActivityForResult(myIntent, 0);
+        finish();
         return true;
     }
 

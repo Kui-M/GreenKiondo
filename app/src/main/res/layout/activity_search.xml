@@ -20,11 +20,11 @@
 
     <Button
         android:id="@+id/btn_search_recipe"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/ed_search"
-        android:layout_marginEnd="18dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/ic_search" />
 
     <LinearLayout
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"></ListView>
+            android:layout_centerHorizontal="true" />
 
     </LinearLayout>
 

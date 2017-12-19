@@ -22,7 +22,7 @@
             android:fontFamily="@font/aileron_light"
             android:background="@drawable/lunch_dinner"
             android:textColor="@color/primaryTextColor"
-            android:scaleType="centerInside"
+            android:scaleType="centerCrop"
             />
 
         <ListView
@@ -38,7 +38,7 @@
         android:layout_height="60dp"
         android:background="@color/primaryColor"
         android:fontFamily="@font/aileron_light"
-        android:text="Get Location and Proceed to Checkout"
+        android:text="@string/getLocNCheckout"
         android:textColor="@color/primaryTextColor"
         android:layout_alignParentBottom="true"
 

@@ -27,6 +27,9 @@
     <string name="banner_home_footer">ca-app-pub-7745024037057843/1270147089</string>
     <string name="interstitial_fullscreen">ca-app-pub-7745024037057843/7584273991</string>
 
+    <string name="instructions">View  Instructions</string>
+    <string name="getLocNCheckout">Get Location &amp; Proceed to Checkout</string>
+
     <string name="progress_text">Loading Recipes...</string>
     <string name="progress_text_ingredients">Loading Ingredients...</string>
 

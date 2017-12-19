@@ -15,7 +15,7 @@
         android:fontFamily="@font/aileron_light"
         android:background="@drawable/drinks"
         android:textColor="@color/primaryTextColor"
-        android:scaleType="centerInside"
+        android:scaleType="centerCrop"
         />
 
     <ListView

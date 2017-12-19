@@ -39,6 +39,7 @@ public class Final extends AppCompatActivity {
         stBuilder.append("\n");
         */stBuilder.append("Your Kiondo will be sent to: ");
         stBuilder.append("\n");
+        stBuilder.append("\n");
         stBuilder.append(placename);
         stBuilder.append("\n");
         stBuilder.append(address);

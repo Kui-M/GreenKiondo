@@ -51,6 +51,9 @@ public class SearchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
@@ -60,9 +63,7 @@ public class SearchActivity extends AppCompatActivity {
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),
-                        "it can be clicked", Toast.LENGTH_LONG)
-                        .show();
+
                 String s_recipe = search_recipe.getText().toString().trim();
 
                 /*http://food2fork.com/api/get?key=965c095439caf056aa29b3f87c0f71ae&rId=47025*/
@@ -137,7 +138,7 @@ public class SearchActivity extends AppCompatActivity {
         });
 
 
-        listView = (ListView) findViewById(R.id.searchListView);
+        listView = findViewById(R.id.searchListView);
         adapter = new RecipeListAdapter(this, recipeList);
         listView.setAdapter(adapter);
 

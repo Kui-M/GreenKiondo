@@ -34,7 +34,7 @@
         android:layout_height="60dp"
         android:background="@color/primaryColor"
         android:fontFamily="@font/aileron_light"
-        android:text="View Directions"
+        android:text="@string/instructions"
         android:textColor="@color/primaryTextColor"
         android:layout_alignParentBottom="true"
         />
