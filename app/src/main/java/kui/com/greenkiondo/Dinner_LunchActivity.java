@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -124,7 +126,7 @@ public class Dinner_LunchActivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d(TAG, "Error: " + error.getMessage());
                 // hide the progress dialog
-                pDialog.hide();
+                progressBar.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -133,23 +135,23 @@ public class Dinner_LunchActivity extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(jsonObjReq);
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        hidePDialog();
-    }
-
-    private void hidePDialog() {
-        if (pDialog != null) {
-            pDialog.dismiss();
-            pDialog = null;
-        }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_bar_buttons, menu);
+        return true;
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
-        Intent myIntent = new Intent(getApplicationContext(), NavActivity.class);
-        startActivityForResult(myIntent, 0);
-        return true;
+        switch(item.getItemId()){
+            case R.id.action_my_kiondo:
+                Intent mk = new Intent(Dinner_LunchActivity.this,MyKiondoActivity.class);
+                startActivity(mk);
+                return true;
+            default:
+                Intent myIntent = new Intent(getApplicationContext(), NavActivity.class);
+                startActivityForResult(myIntent, 0);
+                return true;
+        }
     }
 
 }

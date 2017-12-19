@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -49,9 +51,6 @@ public class SearchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
@@ -172,10 +171,22 @@ public class SearchActivity extends AppCompatActivity {
     }
 
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_bar_buttons, menu);
+        return true;
+    }
 
     public boolean onOptionsItemSelected(MenuItem item){
-        finish();
-        return true;
+        switch(item.getItemId()){
+            case R.id.action_my_kiondo:
+                Intent mk = new Intent(SearchActivity.this,MyKiondoActivity.class);
+                startActivity(mk);
+                return true;
+            default:
+                finish();
+                return true;
+        }
     }
 
 }
