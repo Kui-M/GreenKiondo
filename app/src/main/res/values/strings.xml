@@ -19,8 +19,8 @@
     <string name="pasta">P A S T A</string>
     <string name="vegetarian">V E G E T A R I A N</string>
     <string name="seafood">S E A F O O D</string>
-    <string name="mykiondo">My Kiondo</string>
-    <string name="browse">Browse</string>
+    <string name="mykiondo">M Y  K I O N D O</string>
+    <string name="browse">B R O W S E</string>
     <string name="search">Search</string>
     <string name="ingredients">Ingredients</string>
 
@@ -28,7 +28,7 @@
     <string name="interstitial_fullscreen">ca-app-pub-7745024037057843/7584273991</string>
 
     <string name="instructions">View  Instructions</string>
-    <string name="getLocNCheckout">Get Location &amp; Proceed to Checkout</string>
+    <string name="getLocnCheckout">Get Location &amp; Proceed to Checkout</string>
 
     <string name="progress_text">Loading Recipes...</string>
     <string name="progress_text_ingredients">Loading Ingredients...</string>

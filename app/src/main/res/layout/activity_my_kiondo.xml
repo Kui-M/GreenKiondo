@@ -38,7 +38,7 @@
         android:layout_height="60dp"
         android:background="@color/primaryColor"
         android:fontFamily="@font/aileron_light"
-        android:text="@string/getLocNCheckout"
+        android:text="@string/getLocnCheckout"
         android:textColor="@color/primaryTextColor"
         android:layout_alignParentBottom="true"
 
